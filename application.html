@@ -43,232 +43,55 @@
 </nav></div></header>
 
 <main id="main">
-
-    <section class="page-hero">
-        <div class="container">
-            <span class="eyebrow">2027 APPLICATION</span>
-            <h1>Start your Crestwood journey.</h1>
-            <p>Complete the application form below. This is a front-end demonstration and does not submit real personal information.</p>
-        </div>
-    </section>
-
-    <section class="section-padding">
-        <div class="container application-layout">
-
-            <div class="application-intro">
-                <img src="media/application-campus.png" alt="Contemporary university campus entrance with students arriving">
-                <div class="glass-card">
-                    <span class="eyebrow purple-text">BEFORE YOU APPLY</span>
-                    <h2>Application checklist</h2>
-                    <ul class="check-list">
-                        <li>Valid South African ID or passport information</li>
-                        <li>Relevant academic records</li>
-                        <li>Proof of identity</li>
-                        <li>Programme information</li>
-                        <li>Motivation statement</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="form-card">
-                <div class="section-heading left-heading">
-                    <span class="eyebrow purple-text">APPLICATION FORM</span>
-                    <h2>2027 Applicant Details</h2>
-                    <p>Fields marked with * are required.</p>
-                </div>
-
-                <form id="applicationForm" novalidate>
-
-                    <fieldset>
-                        <legend class="icon-heading"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-user"></use></svg>Personal Information</legend>
-
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="firstName">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" required>
-                                <span class="error-message" id="firstNameError"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="surname">Surname *</label>
-                                <input type="text" id="surname" name="surname" required>
-                                <span class="error-message" id="surnameError"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="dob">Date of Birth *</label>
-                                <input type="date" id="dob" name="dob" required>
-                                <span class="error-message" id="dobError"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="nationality">Nationality *</label>
-                                <select id="nationality" name="nationality" required>
-                                    <option value="">Select nationality</option>
-                                    <option value="South African">South African</option>
-                                    <option value="Zimbabwean">Zimbabwean</option>
-                                    <option value="Botswanan">Botswanan</option>
-                                    <option value="Namibian">Namibian</option>
-                                    <option value="Mozambican">Mozambican</option>
-                                    <option value="Zambian">Zambian</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                                <span class="error-message" id="nationalityError"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
-                                <span class="error-message" id="emailError"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="telephone">Telephone Number *</label>
-                                <input type="tel" id="telephone" name="telephone" placeholder="+27 71 234 5678" required>
-                                <span class="error-message" id="telephoneError"></span>
-                            </div>
-
-                            <div class="form-group full-width">
-                                <label for="identity">South African ID / Passport Number *</label>
-                                <input type="text" id="identity" name="identity" required>
-                                <span class="error-message" id="identityError"></span>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend class="icon-heading"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-user"></use></svg>Gender</legend>
-
-                        <div class="radio-group">
-                            <label>
-                                <input type="radio" name="gender" value="Female" required>
-                                Female
-                            </label>
-
-                            <label>
-                                <input type="radio" name="gender" value="Male">
-                                Male
-                            </label>
-
-                            <label>
-                                <input type="radio" name="gender" value="Non-binary">
-                                Non-binary
-                            </label>
-
-                            <label>
-                                <input type="radio" name="gender" value="Prefer not to say">
-                                Prefer not to say
-                            </label>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend class="icon-heading"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-book"></use></svg>Programme Selection</legend>
-
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="studyLevel">Study Level *</label>
-                                <select id="studyLevel" name="studyLevel" required>
-                                    <option value="">Select study level</option>
-                                    <option value="Undergraduate">Undergraduate</option>
-                                    <option value="Honours">Honours</option>
-                                    <option value="Master's">Master's</option>
-                                    <option value="PhD">PhD</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="faculty">Faculty *</label>
-                                <select id="faculty" name="faculty" required>
-                                    <option value="">Select faculty</option>
-                                    <option value="business">Faculty of Business and Management</option>
-                                    <option value="computing">Faculty of Computing and Information Technology</option>
-                                    <option value="engineering">Faculty of Engineering</option>
-                                    <option value="education">Faculty of Education</option>
-                                    <option value="arts">Faculty of Arts and Humanities</option>
-                                    <option value="science">Faculty of Science</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group full-width">
-                                <label for="programme">Programme *</label>
-                                <select id="programme" name="programme" required disabled>
-                                    <option value="">Select a faculty first</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="intake">Intake Year *</label>
-                                <select id="intake" name="intake" required>
-                                    <option value="2027">2027</option>
-                                </select>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend class="icon-heading"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-wallet"></use></svg>Financial Aid</legend>
-
-                        <p class="field-description">Would you like to be considered for financial aid?</p>
-
-                        <div class="radio-group">
-                            <label>
-                                <input type="radio" name="financialAid" value="Yes" required>
-                                Yes
-                            </label>
-
-                            <label>
-                                <input type="radio" name="financialAid" value="No">
-                                No
-                            </label>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend class="icon-heading"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg>Document Checklist</legend>
-
-                        <p class="field-description">Please confirm that you have the following documents available.</p>
-
-                        <div class="checkbox-group">
-                            <label>
-                                <input type="checkbox" name="documents" value="identity">
-                                Identification document
-                            </label>
-
-                            <label>
-                                <input type="checkbox" name="documents" value="academic">
-                                Academic records
-                            </label>
-
-                            <label>
-                                <input type="checkbox" name="documents" value="proof">
-                                Proof of previous qualification
-                            </label>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend class="icon-heading"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-graduation"></use></svg>Motivation</legend>
-
-                        <div class="form-group">
-                            <label for="motivation">Why would you like to study at Crestwood University? *</label>
-                            <textarea id="motivation" name="motivation" rows="7" required></textarea>
-                            <span class="error-message" id="motivationError"></span>
-                        </div>
-                    </fieldset>
-
-                    <div id="applicationMessage" class="form-message" role="alert" aria-live="polite"></div>
-
-                    <div class="form-actions">
-                        <button type="reset" class="button button-secondary">Clear Form</button>
-                        <button type="submit" class="button button-primary">Submit Application</button>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-    </section>
-
+<section class="page-hero"><div class="container"><span class="eyebrow">2027 APPLICATION</span><h1>Start your Crestwood journey.</h1><p>Complete the application form below. This is a front-end demonstration and does not submit real personal information.</p></div></section>
+<section class="section-padding"><div class="container application-layout">
+<aside class="application-sidebar">
+<img src="media/application-campus.png" alt="Contemporary university campus entrance with students arriving" loading="lazy" width="1200" height="800">
+<div class="glass-card sticky-panel">
+<span class="eyebrow purple-text">APPLICATION CHECKLIST</span>
+<h2>Documents to prepare</h2>
+<p>Keep these documents available while completing the form.</p>
+<div class="checkbox-group sidebar-checklist">
+<label><input type="checkbox" form="applicationForm" name="documents" value="identity" required>Identification document</label>
+<label><input type="checkbox" form="applicationForm" name="documents" value="academic">Academic records</label>
+<label><input type="checkbox" form="applicationForm" name="documents" value="proof">Proof of previous qualification</label>
+</div>
+<div class="progress-panel"><strong>Application progress</strong><div class="progress-track"><span id="applicationProgressBar"></span></div><p id="applicationProgressText">0 of 5 sections complete</p></div>
+</div></aside>
+<div class="form-card">
+<div class="section-heading left-heading"><span class="eyebrow purple-text">APPLICATION FORM</span><h2>2027 Applicant Details</h2><p><span aria-hidden="true">*</span> required</p></div>
+<div id="applicationErrorSummary" class="error-summary" role="alert" tabindex="-1" hidden><strong>Please check the following:</strong><ul></ul></div>
+<form id="applicationForm" novalidate>
+<fieldset data-section="1" id="section-personal"><legend><span class="section-number">1</span><span class="icon-heading"><svg class="ui-icon" aria-hidden="true"><use href="#icon-user"></use></svg>Personal Information</span></legend>
+<div class="form-grid">
+<div class="form-group"><label for="firstName">First Name <span aria-hidden="true">*</span></label><input type="text" id="firstName" name="firstName" autocomplete="given-name" required aria-describedby="firstNameError"><span class="error-message" id="firstNameError"></span></div>
+<div class="form-group"><label for="surname">Surname <span aria-hidden="true">*</span></label><input type="text" id="surname" name="surname" autocomplete="family-name" required aria-describedby="surnameError"><span class="error-message" id="surnameError"></span></div>
+<div class="form-group"><label for="dob">Date of Birth <span aria-hidden="true">*</span></label><input type="date" id="dob" name="dob" autocomplete="bday" required aria-describedby="dobError"><span class="error-message" id="dobError"></span></div>
+<div class="form-group"><label for="nationality">Nationality <span aria-hidden="true">*</span></label><select id="nationality" name="nationality" autocomplete="country-name" required aria-describedby="nationalityError"><option value="">Select nationality</option><option value="South African">South African</option><option value="Zimbabwean">Zimbabwean</option><option value="Botswanan">Botswanan</option><option value="Namibian">Namibian</option><option value="Mozambican">Mozambican</option><option value="Zambian">Zambian</option><option value="Other">Other</option></select><span class="error-message" id="nationalityError"></span></div>
+<div class="form-group"><label for="email">Email Address <span aria-hidden="true">*</span></label><input type="email" id="email" name="email" autocomplete="email" inputmode="email" required aria-describedby="emailError"><span class="error-message" id="emailError"></span></div>
+<div class="form-group"><label for="telephone">Telephone Number <span aria-hidden="true">*</span></label><input type="tel" id="telephone" name="telephone" autocomplete="tel" inputmode="tel" placeholder="+27 71 234 5678" required aria-describedby="telephoneError"><small class="helper-text">Use a full international format, for example +27 71 234 5678.</small><span class="error-message" id="telephoneError"></span></div>
+<div class="form-group full-width"><label for="identity">South African ID / Passport Number <span aria-hidden="true">*</span></label><input type="text" id="identity" name="identity" autocomplete="off" inputmode="text" required aria-describedby="identityHelp identityError"><small id="identityHelp" class="helper-text">Enter your South African ID or passport number exactly as it appears on the document.</small><span class="error-message" id="identityError"></span></div>
+<div class="form-group full-width"><span class="field-label">Gender <span aria-hidden="true">*</span></span><div class="radio-group" role="radiogroup" aria-describedby="genderError"><label><input type="radio" name="gender" value="Female" required>Female</label><label><input type="radio" name="gender" value="Male">Male</label><label><input type="radio" name="gender" value="Non-binary">Non-binary</label><label><input type="radio" name="gender" value="Prefer not to say">Prefer not to say</label></div><span class="error-message" id="genderError"></span></div>
+</div></fieldset>
+<fieldset data-section="2" id="section-programme"><legend><span class="section-number">2</span><span class="icon-heading"><svg class="ui-icon" aria-hidden="true"><use href="#icon-book"></use></svg>Programme Selection</span></legend>
+<div class="form-grid">
+<div class="form-group"><label for="studyLevel">Study Level <span aria-hidden="true">*</span></label><select id="studyLevel" name="studyLevel" required aria-describedby="studyLevelError"><option value="">Select study level</option><option value="Undergraduate">Undergraduate</option><option value="Honours">Honours</option><option value="Master's">Master's</option><option value="PhD">PhD</option></select><span class="error-message" id="studyLevelError"></span></div>
+<div class="form-group"><label for="faculty">Faculty <span aria-hidden="true">*</span></label><select id="faculty" name="faculty" required aria-describedby="facultyError"><option value="">Select faculty</option><option value="business">Faculty of Business and Management</option><option value="computing">Faculty of Computing and Information Technology</option><option value="engineering">Faculty of Engineering</option><option value="education">Faculty of Education</option><option value="arts">Faculty of Arts and Humanities</option><option value="science">Faculty of Science</option></select><span class="error-message" id="facultyError"></span></div>
+<div class="form-group full-width"><label for="programme">Programme <span aria-hidden="true">*</span></label><select id="programme" name="programme" required disabled aria-describedby="programmeHelp programmeError"><option value="">Select a study level and faculty first</option></select><small id="programmeHelp" class="helper-text">Choose a study level and faculty to see only compatible programmes.</small><span class="error-message" id="programmeError"></span></div>
+<div class="form-group"><label for="intake">Intake Year <span aria-hidden="true">*</span></label><input type="text" id="intake" name="intake" value="2027" readonly aria-readonly="true"></div>
+</div></fieldset>
+<fieldset data-section="3" id="section-aid"><legend><span class="section-number">3</span><span class="icon-heading"><svg class="ui-icon" aria-hidden="true"><use href="#icon-wallet"></use></svg>Financial Aid</span></legend>
+<p class="field-description">Would you like to be considered for financial aid?</p><div class="radio-group" role="radiogroup" aria-describedby="financialAidError"><label><input type="radio" name="financialAid" value="Yes" required>Yes</label><label><input type="radio" name="financialAid" value="No">No</label></div><span class="error-message" id="financialAidError"></span>
+</fieldset>
+<fieldset data-section="4" id="section-documents"><legend><span class="section-number">4</span><span class="icon-heading"><svg class="ui-icon" aria-hidden="true"><use href="#icon-check"></use></svg>Documents</span></legend><p class="field-description">Use the single checklist in the sticky panel to confirm the documents you have available. At least the identification document is required for this demonstration form.</p><a class="text-link" href="#document-checklist">Jump to document checklist <svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a><span class="error-message" id="documentsError"></span></fieldset>
+<fieldset data-section="5" id="section-motivation"><legend><span class="section-number">5</span><span class="icon-heading"><svg class="ui-icon" aria-hidden="true"><use href="#icon-graduation"></use></svg>Motivation</span></legend>
+<div class="form-group"><label for="motivation">Why would you like to study at Crestwood University? <span aria-hidden="true">*</span></label><textarea id="motivation" name="motivation" rows="7" maxlength="1500" required aria-describedby="motivationHelp motivationCounter motivationError"></textarea><small id="motivationHelp" class="helper-text">A thoughtful response of around 120 characters or more is encouraged.</small><div id="motivationCounter" class="character-counter" aria-live="polite">0 / 1500</div><span class="error-message" id="motivationError"></span></div>
+</fieldset>
+<div id="applicationMessage" class="form-message" role="status" tabindex="-1"></div>
+<div class="form-actions"><button type="reset" class="button button-text">Clear Form</button><button type="submit" class="button button-primary">Submit Application</button></div>
+</form>
+<div id="applicationSuccess" class="success-panel" role="status" tabindex="-1" hidden><span class="success-icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-check"></use></svg></span><span class="eyebrow purple-text">APPLICATION READY</span><h2>Application received for demonstration.</h2><p>Your reference number is <strong id="applicationReference"></strong>.</p><button type="button" id="copyReference" class="button button-secondary">Copy reference</button><button type="button" id="newApplication" class="button button-primary">Start a new application</button></div>
+</div></div></section>
 </main>
 
 <footer class="site-footer">
