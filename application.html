@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply to Crestwood University for the 2027 academic intake.">
+    <title>Crestwood University | Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">C</span>
+            <span><strong>Crestwood</strong><small>University</small></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="programmes.html">Programmes</a>
+            <a href="services.html">Services</a>
+            <a href="application.html" class="active">Application</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="application.html" class="nav-cta">Apply Now</a>
+    </div>
+</header>
+
+<main>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="eyebrow">2027 APPLICATION</span>
+            <h1>Start your Crestwood journey.</h1>
+            <p>Complete the application form below. This is a front-end demonstration and does not submit real personal information.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container application-layout">
+
+            <div class="application-intro">
+                <img src="media/application-campus.jpg" alt="Crestwood University campus entrance">
+                <div class="glass-card">
+                    <span class="eyebrow purple-text">BEFORE YOU APPLY</span>
+                    <h2>Application checklist</h2>
+                    <ul class="check-list">
+                        <li>Valid South African ID or passport information</li>
+                        <li>Relevant academic records</li>
+                        <li>Proof of identity</li>
+                        <li>Programme information</li>
+                        <li>Motivation statement</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-card">
+                <div class="section-heading left-heading">
+                    <span class="eyebrow purple-text">APPLICATION FORM</span>
+                    <h2>2027 Applicant Details</h2>
+                    <p>Fields marked with * are required.</p>
+                </div>
+
+                <form id="applicationForm" novalidate>
+
+                    <fieldset>
+                        <legend>Personal Information</legend>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <span class="error-message" id="firstNameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="surname">Surname *</label>
+                                <input type="text" id="surname" name="surname" required>
+                                <span class="error-message" id="surnameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dob">Date of Birth *</label>
+                                <input type="date" id="dob" name="dob" required>
+                                <span class="error-message" id="dobError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nationality">Nationality *</label>
+                                <select id="nationality" name="nationality" required>
+                                    <option value="">Select nationality</option>
+                                    <option value="South African">South African</option>
+                                    <option value="Zimbabwean">Zimbabwean</option>
+                                    <option value="Botswanan">Botswanan</option>
+                                    <option value="Namibian">Namibian</option>
+                                    <option value="Mozambican">Mozambican</option>
+                                    <option value="Zambian">Zambian</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <span class="error-message" id="nationalityError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telephone">Telephone Number *</label>
+                                <input type="tel" id="telephone" name="telephone" placeholder="+27 71 234 5678" required>
+                                <span class="error-message" id="telephoneError"></span>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="identity">South African ID / Passport Number *</label>
+                                <input type="text" id="identity" name="identity" required>
+                                <span class="error-message" id="identityError"></span>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Gender</legend>
+
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="gender" value="Female" required>
+                                Female
+                            </label>
+
+                            <label>
+                                <input type="radio" name="gender" value="Male">
+                                Male
+                            </label>
+
+                            <label>
+                                <input type="radio" name="gender" value="Non-binary">
+                                Non-binary
+                            </label>
+
+                            <label>
+                                <input type="radio" name="gender" value="Prefer not to say">
+                                Prefer not to say
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Programme Selection</legend>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="studyLevel">Study Level *</label>
+                                <select id="studyLevel" name="studyLevel" required>
+                                    <option value="">Select study level</option>
+                                    <option value="Undergraduate">Undergraduate</option>
+                                    <option value="Honours">Honours</option>
+                                    <option value="Master's">Master's</option>
+                                    <option value="PhD">PhD</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="faculty">Faculty *</label>
+                                <select id="faculty" name="faculty" required>
+                                    <option value="">Select faculty</option>
+                                    <option value="business">Faculty of Business and Management</option>
+                                    <option value="computing">Faculty of Computing and Information Technology</option>
+                                    <option value="engineering">Faculty of Engineering</option>
+                                    <option value="education">Faculty of Education</option>
+                                    <option value="arts">Faculty of Arts and Humanities</option>
+                                    <option value="science">Faculty of Science</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="programme">Programme *</label>
+                                <select id="programme" name="programme" required disabled>
+                                    <option value="">Select a faculty first</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="intake">Intake Year *</label>
+                                <select id="intake" name="intake" required>
+                                    <option value="2027">2027</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Financial Aid</legend>
+
+                        <p class="field-description">Would you like to be considered for financial aid?</p>
+
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="financialAid" value="Yes" required>
+                                Yes
+                            </label>
+
+                            <label>
+                                <input type="radio" name="financialAid" value="No">
+                                No
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Document Checklist</legend>
+
+                        <p class="field-description">Please confirm that you have the following documents available.</p>
+
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="documents" value="identity">
+                                Identification document
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="documents" value="academic">
+                                Academic records
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="documents" value="proof">
+                                Proof of previous qualification
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Motivation</legend>
+
+                        <div class="form-group">
+                            <label for="motivation">Why would you like to study at Crestwood University? *</label>
+                            <textarea id="motivation" name="motivation" rows="7" required></textarea>
+                            <span class="error-message" id="motivationError"></span>
+                        </div>
+                    </fieldset>
+
+                    <div id="applicationMessage" class="form-message" role="alert" aria-live="polite"></div>
+
+                    <div class="form-actions">
+                        <button type="reset" class="button button-secondary">Clear Form</button>
+                        <button type="submit" class="button button-primary">Submit Application</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <a href="index.html" class="logo footer-logo">
+                <span class="logo-mark">C</span>
+                <span><strong>Crestwood</strong><small>University</small></span>
+            </a>
+            <p>Knowledge. Innovation. Impact.</p>
+            <p>Johannesburg, Gauteng, South Africa</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Programmes</a>
+            <a href="services.html">Student Services</a>
+            <a href="application.html">Apply</a>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <a href="mailto:info@crestwood.ac.za">info@crestwood.ac.za</a>
+            <a href="tel:+27115550198">+27 11 555 0198</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div>
+            <h3>Connect</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">X</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p>&copy; 2027 Crestwood University. Fictional university website created for academic demonstration.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
