@@ -1085,3 +1085,13 @@ textarea {
         gap: 12px;
     }
 }
+
+/* Consistent inline icon treatment */
+.ui-icon{width:1.15rem;height:1.15rem;flex:0 0 auto;display:inline-block;vertical-align:-0.18em;color:var(--violet-600);fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.icon-heading{display:inline-flex;align-items:center;gap:.65rem}
+.icon-heading .ui-icon{width:1.35rem;height:1.35rem}
+.service-card .icon-heading{color:var(--navy-900)}
+.contact-details>div{display:grid;gap:.3rem}
+.contact-details>div>span{display:inline-flex;align-items:center;gap:.45rem}
+.link-list a{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+@media (max-width:760px){.ui-icon{width:1.05rem;height:1.05rem}}
