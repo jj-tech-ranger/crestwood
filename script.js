@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 message = checked ? "" : "Select whether you would like to be considered for financial aid.";
                 return setError(field, message, "financialAidError");
             } else if (field.name === "documents") {
-                const identity = applicationForm.querySelector('input[name="documents"][value="identity"]');
+                const identity = document.querySelector('input[name="documents"][value="identity"]');
                 message = identity && identity.checked ? "" : "Confirm that you have an identification document.";
                 const error = $("#documentsError");
                 if (error) error.textContent = message;
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 Boolean($("#firstName")?.value.trim() && $("#surname")?.value.trim() && $("#dob")?.value && $("#nationality")?.value && $("#email")?.value && $("#telephone")?.value && $("#identity")?.value && applicationForm.querySelector('input[name="gender"]:checked')),
                 Boolean(studyLevelSelect?.value && facultySelect?.value && programmeSelect?.value),
                 Boolean(applicationForm.querySelector('input[name="financialAid"]:checked')),
-                Boolean(applicationForm.querySelector('input[name="documents"][value="identity"]:checked')),
+                Boolean(document.querySelector('input[name="documents"][value="identity"]:checked')),
                 Boolean(motivation?.value.trim())
             ];
             const done = checks.filter(Boolean).length;
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
         facultySelect?.addEventListener("change", () => { updateProgrammeOptions(); validateField(facultySelect); updateProgress(); });
         studyLevelSelect?.addEventListener("change", () => { updateProgrammeOptions(); validateField(studyLevelSelect); updateProgress(); });
         programmeSelect?.addEventListener("change", () => { validateField(programmeSelect); updateProgress(); });
-        $$('input[name="gender"], input[name="financialAid"], input[name="documents"]', applicationForm).forEach(input => {
+        $("input[name=\"gender\"], input[name=\"financialAid\"], input[name=\"documents\"]", document).forEach(input => {
             input.addEventListener("change", () => { validateField(input); updateProgress(); });
         });
         $$("input, select, textarea", applicationForm).forEach(field => {
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!validateField(gender)) errors.push({field: gender, message: $("#genderError")?.textContent || "Select a gender option."});
             const aid = applicationForm.querySelector('input[name="financialAid"]');
             if (!validateField(aid)) errors.push({field: aid, message: $("#financialAidError")?.textContent || "Select a financial aid option."});
-            const identity = applicationForm.querySelector('input[name="documents"][value="identity"]');
+            const identity = document.querySelector('input[name="documents"][value="identity"]');
             if (!validateField(identity)) errors.push({field: identity, message: $("#documentsError")?.textContent || "Confirm your documents."});
             const unique = errors.filter((item, index, arr) => arr.findIndex(x => x.message === item.message) === index);
             buildSummary(unique);
@@ -237,6 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             setTimeout(() => {
                 applicationForm.reset();
+                $("input[name=\"documents\"]").forEach(el => { el.checked = false; });
                 applicationForm.hidden = false;
                 successPanel.hidden = true;
                 errorSummary.hidden = true;
@@ -263,6 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
             successPanel.hidden = true;
             applicationForm.hidden = false;
             applicationForm.reset();
+            $("input[name=\"documents\"]").forEach(el => { el.checked = false; });
             updateProgrammeOptions();
             updateMotivationCounter();
             updateProgress();
@@ -284,7 +286,7 @@ document.addEventListener("DOMContentLoaded", () => {
         contactForm.addEventListener("submit", e => {
             e.preventDefault();
             let firstInvalid = null;
-            $$("[required]", contactForm).forEach(field => {
+            $("[required]", contactForm).forEach(field => {
                 const error = $("#" + field.id + "Error");
                 let msg = "";
                 if (!String(field.value || "").trim()) msg = "This field is required.";
