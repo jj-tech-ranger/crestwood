@@ -45,7 +45,7 @@
 <main id="main">
 
     <section class="hero">
-        <img src="media/campus-hero.png" alt="Contemporary university campus with landscaped grounds and students walking between academic buildings">
+        <img src="media/campus-hero.png" alt="Contemporary university campus with landscaped grounds and students walking between academic buildings" fetchpriority="high">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <span class="eyebrow">CRESTWOOD UNIVERSITY · SOUTH AFRICA</span>
@@ -67,12 +67,11 @@
                 <a href="about.html" class="text-link">Discover our story <svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-arrow"></use></svg></a>
             </div>
 
-            <div class="glass-card highlight-card">
-                <span class="card-icon"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-graduation"></use></svg></span>
-                <h3>Our Motto</h3>
-                <p class="large-text">Knowledge. Innovation. Impact.</p>
-                <p>We connect academic excellence with practical solutions and meaningful social impact.</p>
-            </div>
+            <div class="start-here-card"><span class="eyebrow purple-text">START HERE</span><h2>Find your next step.</h2><div class="start-here-grid">
+<a href="programmes.html"><span><svg class="ui-icon" aria-hidden="true"><use href="#icon-book"></use></svg><strong>Explore programmes</strong><small>Compare faculties and study levels.</small></span><svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+<a href="services.html"><span><svg class="ui-icon" aria-hidden="true"><use href="#icon-heart"></use></svg><strong>Student life</strong><small>Find support, wellbeing and campus services.</small></span><svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+<a href="application.html"><span><svg class="ui-icon" aria-hidden="true"><use href="#icon-graduation"></use></svg><strong>Apply for 2027</strong><small>Start your application in a few steps.</small></span><svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+</div></div>
         </div>
     </section>
 
@@ -107,7 +106,7 @@
 
             <div class="image-grid">
                 <article class="image-card large-image-card">
-                    <img src="media/students-programmes.png" alt="Students collaborating in a contemporary university learning space">
+                    <img src="media/students-programmes.png" alt="Students collaborating in a contemporary university learning space" loading="lazy" width="1200" height="800">
                     <div class="image-card-content">
                         <span>Academic Life</span>
                         <h3>Learn with purpose.</h3>
@@ -116,7 +115,7 @@
                 </article>
 
                 <article class="image-card">
-                    <img src="media/student-services.png" alt="Students spending time together in a university campus social space">
+                    <img src="media/student-services.png" alt="Students spending time together in a university campus social space" loading="lazy" width="1200" height="800">
                     <div class="image-card-content">
                         <span>Student Life</span>
                         <h3>Find your community.</h3>
@@ -136,10 +135,11 @@
             </div>
 
             <div class="video-wrapper">
-                <video controls poster="media/campus-hero.png">
+                <video controls poster="media/campus-hero.png" preload="metadata">
                     <source src="media/crestwood-intro.mp4" type="video/mp4">
                     Your browser does not support HTML5 video. Please use a modern browser to view this content.
-                </video>
+                <track kind="captions" srclang="en" label="English captions" src="">
+<p class="video-fallback">This video could not be loaded. Please check that the MP4 file is available.</p></video>
             </div>
         </div>
     </section>
