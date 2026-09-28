@@ -1095,3 +1095,6 @@ textarea {
 .contact-details>div>span{display:inline-flex;align-items:center;gap:.45rem}
 .link-list a{display:flex;align-items:center;justify-content:space-between;gap:1rem}
 @media (max-width:760px){.ui-icon{width:1.05rem;height:1.05rem}}
+
+.icon-sprite{position:absolute;width:0;height:0;overflow:hidden}
+legend.icon-heading{display:flex;align-items:center;gap:.65rem}
